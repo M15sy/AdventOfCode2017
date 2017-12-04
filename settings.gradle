@@ -1,0 +1,5 @@
+rootProject.name = 'AdventOfCode2017'
+include 'CLI'
+findProject(':CLI')?.name = 'cli'
+include 'Core'
+findProject(':Core')?.name = 'core'

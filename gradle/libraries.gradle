@@ -1,0 +1,5 @@
+ext.libraries = [
+        codepoetics        : "com.codepoetics:protonpack:1.14",
+        apache_commons_io     : "commons-io:commons-io:2.6",
+        apache_commons_lang: "org.apache.commons:commons-lang3:3.7"
+]

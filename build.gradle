@@ -1,0 +1,25 @@
+apply plugin: "base"
+apply from: "$rootDir/gradle/libraries.gradle"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3.1'
+}
+
+allprojects {
+    group 'com.missy.adventofcode2017'
+    version '0.0.0'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = JavaVersion.VERSION_1_9
+    targetCompatibility = JavaVersion.VERSION_1_9
+
+    apply from: "$rootDir/gradle/checkstyle.gradle"
+}
+

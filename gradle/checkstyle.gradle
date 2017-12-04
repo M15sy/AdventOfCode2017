@@ -1,0 +1,21 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    configFile = rootProject.file('checkstyle/checkstyle.xml')
+    configProperties = [checkstyleSuppressionFile: rootProject.file('checkstyle/suppressions.xml')]
+
+    // By default, Gradle will use an outdated version of CheckStyle.
+    toolVersion = '8.4'
+}
+
+tasks.withType(Checkstyle).each { checkstyleTask ->
+    checkstyleTask.doLast {
+        reports.all { report ->
+            def outputFile = report.destination
+            if (outputFile.exists() && outputFile.text.contains("<error ")
+                    && (outputFile.text.contains("severity=\"warning\"") || outputFile.text.contains("severity=\"error\""))) {
+                throw new GradleException("There were checkstyle errors/warnings! For more info check $outputFile")
+            }
+        }
+    }
+}
