@@ -5,6 +5,8 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A solution to an <a href="http://adventofcode.com/2017">Advent Of Code 2017</a> puzzle.
@@ -16,6 +18,14 @@ abstract class SolutionImpl implements Solution {
      * @return the puzzle input file's name as a {@link String}.
      */
     abstract String getInputFileName();
+
+    /**
+     * Returns the puzzle input as an {@link InputStream}.
+     * @return the puzzle input as an {@link InputStream}.
+     */
+    InputStream getInputAsStream() {
+        return getClass().getClassLoader().getResourceAsStream(getInputFileName());
+    }
 
     /**
      * Returns the puzzle input as a {@link String}.
@@ -31,10 +41,22 @@ abstract class SolutionImpl implements Solution {
     }
 
     /**
-     * Returns the puzzle input as an {@link InputStream}.
-     * @return the puzzle input as an {@link InputStream}.
+     * Returns the puzzle input as an {@link Integer}.
+     * @throws IOException if an IO error occurs.
+     * @return the puzzle input as an {@link Integer}.
      */
-    InputStream getInputAsStream() {
-        return getClass().getClassLoader().getResourceAsStream(getInputFileName());
+    Integer getInputAsInteger() throws IOException {
+       return Integer.parseInt(getInputAsString());
+    }
+
+    /**
+     * Returns the puzzle input as a {@link List} of {@link Integer}.
+     * @throws IOException if an IO error occurs.
+     * @return the puzzle input as a {@link List} of {@link Integer}.
+     */
+    List<Integer> getInputAsListOfInteger() throws IOException {
+        return getInputAsString().chars()
+                .mapToObj(i -> Integer.parseInt(String.valueOf((char) i)))
+                .collect(Collectors.toList());
     }
 }

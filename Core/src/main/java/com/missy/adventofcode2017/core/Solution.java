@@ -14,7 +14,7 @@ public interface Solution {
     String getQuestionName();
 
     /**
-     * Solves the puzzle and returns the answer as a {@link String}
+     * Solves the puzzle and returns the answer as a {@link String}.
      * @throws IOException if an IO error occurs.
      * @return the answer as a {@link String}.
      */

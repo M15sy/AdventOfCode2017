@@ -8,8 +8,8 @@ import java.util.List;
 public final class SolutionManager {
 
     private static List<Solution> solutions = List.of(
-//            new Solution01a(),
-//            new Solution01b(),
+            new Solution01a(),
+            new Solution01b(),
 //            new Solution02a(),
 //            new Solution02b(),
 //            new Solution03a(),
