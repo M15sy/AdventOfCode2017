@@ -21,7 +21,7 @@ class Solution04b extends Solution04 {
     private boolean isAnagram(final String word, final String otherWord) {
         final char[] word1 = word.toCharArray();
         final char[] word2 = otherWord.toCharArray();
-        Map<Character, Integer> lettersInWord1 = new HashMap<>();
+        final Map<Character, Integer> lettersInWord1 = new HashMap<>();
 
         // for each char in word1, add the count to the map
         for (char c : word1) {
