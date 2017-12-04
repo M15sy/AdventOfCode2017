@@ -12,9 +12,10 @@ public final class SolutionManager {
 //            new Solution01b(),
 //            new Solution02a(),
 //            new Solution02b(),
-//            new Solution03(),
-//            new Solution04a(),
-//            new Solution04b()
+//            new Solution03a(),
+//            new Solution03b(),
+            new Solution04a(),
+            new Solution04b()
     );
 
     /**
