@@ -5,6 +5,7 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -55,8 +56,9 @@ abstract class SolutionImpl implements Solution {
      * @return the puzzle input as a {@link List} of {@link Integer}.
      */
     List<Integer> getInputAsListOfInteger() throws IOException {
-        return getInputAsString().chars()
-                .mapToObj(i -> Integer.parseInt(String.valueOf((char) i)))
+        return Arrays.stream(getInputAsString().split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .boxed()
                 .collect(Collectors.toList());
     }
 }

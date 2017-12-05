@@ -5,6 +5,7 @@ import com.codepoetics.protonpack.StreamUtils;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A solution to day 1's puzzle.
@@ -34,7 +35,10 @@ abstract class Solution01 extends SolutionImpl {
 
     @Override
     public String solve() throws IOException {
-        final List<Integer> input = getInputAsListOfInteger();
+        final List<Integer> input = getInputAsString().chars()
+                .mapToObj(i -> Integer.parseInt(String.valueOf((char) i)))
+                .collect(Collectors.toList());
+
         inputSize = input.size();
 
         final Integer result = StreamUtils

@@ -15,7 +15,9 @@ public final class SolutionManager {
 //            new Solution03a(),
 //            new Solution03b(),
             new Solution04a(),
-            new Solution04b()
+            new Solution04b(),
+            new Solution05a(),
+            new Solution05b()
     );
 
     /**
