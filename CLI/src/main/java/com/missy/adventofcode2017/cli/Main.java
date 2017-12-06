@@ -1,9 +1,11 @@
 package com.missy.adventofcode2017.cli;
 
+import com.missy.adventofcode2017.core.Solution;
 import com.missy.adventofcode2017.core.SolutionManager;
 import org.apache.commons.lang3.time.StopWatch;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,10 +27,15 @@ public final class Main {
     @SuppressWarnings("checkstyle:illegalCatch")
     public static void main(final String[] args) throws IOException {
         final StopWatch stopwatch = new StopWatch();
-        SolutionManager.getAllSolutions().forEach(s -> {
+        final List<Solution> allSolutions = SolutionManager.getAllSolutions();
+        for (int i = 0; i < allSolutions.size(); i++) {
             try {
-                System.out.println();
-                System.out.println(s.getQuestionName());
+                final Solution s = allSolutions.get(i);
+                if (i % 2 == 0) {
+                    System.out.println();
+                    System.out.println(s.getQuestionName());
+                }
+                System.out.println(s.getPartName());
                 stopwatch.start();
                 System.out.println("Answer: " + s.solve());
                 stopwatch.stop();
@@ -37,6 +44,6 @@ public final class Main {
             } catch (final Exception e) {
                 e.printStackTrace();
             }
-        });
+        }
     }
 }

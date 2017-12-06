@@ -6,12 +6,7 @@ import java.util.function.BiFunction;
 /**
  * A solution to day 4 part 2's puzzle.
  */
-class Solution04b extends Solution04 {
-
-    @Override
-    public String getQuestionName() {
-        return "Day 4: High-Entropy Passphrases --- Part Two --- ";
-    }
+class Solution04b extends Solution04 implements PartTwo {
 
     @Override
     BiFunction<String, String, Boolean> getComparator() {

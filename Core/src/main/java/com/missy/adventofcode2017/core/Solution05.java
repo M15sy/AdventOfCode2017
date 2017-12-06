@@ -16,6 +16,11 @@ abstract class Solution05 extends SolutionImpl {
     abstract int newOffset(int offset);
 
     @Override
+    public String getQuestionName() {
+        return "Day 5: A Maze of Twisty Trampolines, All Alike";
+    }
+
+    @Override
     String getInputFileName() {
         return "Day05.txt";
     }

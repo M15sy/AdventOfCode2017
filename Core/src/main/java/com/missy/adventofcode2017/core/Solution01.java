@@ -29,6 +29,11 @@ abstract class Solution01 extends SolutionImpl {
     }
 
     @Override
+    public String getQuestionName() {
+        return "Day 1: Inverse Captcha";
+    }
+
+    @Override
     String getInputFileName() {
         return "Day01.txt";
     }

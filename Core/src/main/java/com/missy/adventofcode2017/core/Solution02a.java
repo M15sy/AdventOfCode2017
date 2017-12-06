@@ -5,13 +5,7 @@ import java.util.List;
 /**
  * A solution to day 2 part 1's puzzle.
  */
-class Solution02a extends Solution02 {
-
-    @Override
-    public String getQuestionName() {
-        return "Day 2: Corruption Checksum --- Part One ---";
-    }
-
+class Solution02a extends Solution02 implements PartOne {
     @Override
     Integer calculateRow(final List<Integer> row) {
         Integer min = Integer.MAX_VALUE;

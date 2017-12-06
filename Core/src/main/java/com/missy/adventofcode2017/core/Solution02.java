@@ -20,6 +20,11 @@ abstract class Solution02 extends SolutionImpl {
     abstract Integer calculateRow(List<Integer> row);
 
     @Override
+    public String getQuestionName() {
+        return "Day 2: Corruption Checksum";
+    }
+
+    @Override
     String getInputFileName() {
         return "Day02.txt";
     }

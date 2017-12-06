@@ -20,6 +20,11 @@ abstract class Solution04 extends SolutionImpl {
     abstract BiFunction<String, String, Boolean> getComparator();
 
     @Override
+    public String getQuestionName() {
+        return "Day 4: High-Entropy Passphrases";
+    }
+
+    @Override
     String getInputFileName() {
         return "Day04.txt";
     }

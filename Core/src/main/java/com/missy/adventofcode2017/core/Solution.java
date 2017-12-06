@@ -5,7 +5,7 @@ import java.io.IOException;
 /**
  * A solution to an <a href="http://adventofcode.com/2017">Advent Of Code 2017</a> puzzle.
  */
-public interface Solution {
+public interface Solution extends Part {
 
     /**
      * Returns the name of the question as a {@link String}.

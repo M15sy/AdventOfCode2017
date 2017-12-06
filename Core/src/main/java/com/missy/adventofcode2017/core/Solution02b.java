@@ -5,13 +5,7 @@ import java.util.List;
 /**
  * A solution to day 2 part 2's puzzle.
  */
-class Solution02b extends Solution02 {
-
-    @Override
-    public String getQuestionName() {
-        return "Day 2: Corruption Checksum --- Part Two ---";
-    }
-
+class Solution02b extends Solution02 implements PartTwo {
     @Override
     Integer calculateRow(final List<Integer> row) {
         // for each number
