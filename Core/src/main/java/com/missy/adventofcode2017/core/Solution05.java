@@ -27,7 +27,7 @@ abstract class Solution05 extends SolutionImpl {
 
     @Override
     public String solve() throws IOException {
-        final List<Integer> input = getInputAsListOfInteger();
+        final List<Integer> input = getInputAsListOfInteger(WHITESPACE_SEPARATOR);
         Integer steps = 0;
         for (int position = 0; position < input.size() && -1 < position;) {
             steps++;

@@ -14,6 +14,9 @@ import java.util.stream.Collectors;
  */
 abstract class SolutionImpl implements Solution {
 
+    static final String WHITESPACE_SEPARATOR = "\\s+";
+    static final String LINE_SEPARATOR = "\\n+";
+
     /**
      * Returns the puzzle input file's name as a {@link String}.
      * @return the puzzle input file's name as a {@link String}.
@@ -30,8 +33,8 @@ abstract class SolutionImpl implements Solution {
 
     /**
      * Returns the puzzle input as a {@link String}.
-     * @throws IOException if an IO error occurs.
      * @return the puzzle input as a {@link String}.
+     * @throws IOException if an IO error occurs.
      */
     String getInputAsString() throws IOException {
         try {
@@ -42,21 +45,23 @@ abstract class SolutionImpl implements Solution {
     }
 
     /**
-     * Returns the puzzle input as an {@link Integer}.
+     * Returns the puzzle input as a {@link List} of {@link Integer}.
+     * @param separator the separator to use.
+     * @return the puzzle input as a {@link List} of {@link Integer}.
      * @throws IOException if an IO error occurs.
-     * @return the puzzle input as an {@link Integer}.
      */
-    Integer getInputAsInteger() throws IOException {
-       return Integer.parseInt(getInputAsString());
+    List<String> getInputAsListOfString(final String separator) throws IOException {
+        return Arrays.asList(getInputAsString().split(separator));
     }
 
     /**
      * Returns the puzzle input as a {@link List} of {@link Integer}.
-     * @throws IOException if an IO error occurs.
+     * @param separator the separator to use.
      * @return the puzzle input as a {@link List} of {@link Integer}.
+     * @throws IOException if an IO error occurs.
      */
-    List<Integer> getInputAsListOfInteger() throws IOException {
-        return Arrays.stream(getInputAsString().split("\\s+"))
+    List<Integer> getInputAsListOfInteger(final String separator) throws IOException {
+        return Arrays.stream(getInputAsString().split(separator))
                 .mapToInt(Integer::parseInt)
                 .boxed()
                 .collect(Collectors.toList());

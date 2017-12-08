@@ -38,7 +38,7 @@ abstract class Solution03 extends SolutionImpl {
 
     @Override
     public String solve() throws IOException {
-        final int targetValue = getInputAsInteger();
+        final int targetValue = getInputAsListOfInteger(LINE_SEPARATOR).get(0);
 
         int width = 1;
         int currentValue = 1;

@@ -30,7 +30,7 @@ abstract class Solution06 extends SolutionImpl {
 
     @Override
     public String solve() throws IOException {
-        final List<Integer> input = getInputAsListOfInteger();
+        final List<Integer> input = getInputAsListOfInteger(WHITESPACE_SEPARATOR);
         final List<String> snapshots = new ArrayList<>();
 
         while (!snapshots.contains(input.toString())) {
