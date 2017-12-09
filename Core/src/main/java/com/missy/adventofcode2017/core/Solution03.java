@@ -74,6 +74,7 @@ abstract class Solution03 extends SolutionImpl {
                     case 3:
                     default:
                         x++;
+                        break;
                 }
 
                 final Coordinate2D position = new Coordinate2D(x, y);
