@@ -1,7 +1,7 @@
 package com.missy.adventofcode2017.core;
 
 /**
- * Created by c05917a on 06/12/2017.
+ * A solution to day 18's puzzle.
  */
-public class Solution18 {
+abstract class Solution18 {
 }
