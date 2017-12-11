@@ -1,5 +1,21 @@
+ext.dependency_versions = [
+        apache_commons_io  : "2.6",
+        apache_commons_lang: "3.7",
+        assertj            : "3.6.1",
+        codepoetics        : "1.14",
+        junit              : "4.12",
+        mockito            : "2.7.0",
+        pragmatists        : "1.1.0"
+]
+
 ext.libraries = [
-        codepoetics        : "com.codepoetics:protonpack:1.14",
-        apache_commons_io     : "commons-io:commons-io:2.6",
-        apache_commons_lang: "org.apache.commons:commons-lang3:3.7"
+        apache_commons_io  : "commons-io:commons-io:${dependency_versions.apache_commons_io}",
+        apache_commons_lang: "org.apache.commons:commons-lang3:${dependency_versions.apache_commons_lang}",
+        codepoetics        : "com.codepoetics:protonpack:${dependency_versions.codepoetics}",
+        test               : [
+                "junit:junit:${dependency_versions.junit}",
+                "org.assertj:assertj-core:${dependency_versions.assertj}",
+                "org.mockito:mockito-core:${dependency_versions.mockito}",
+                "pl.pragmatists:JUnitParams:${dependency_versions.pragmatists}"
+        ]
 ]

@@ -2,4 +2,6 @@ dependencies {
     compile libraries.codepoetics
     compile libraries.apache_commons_io
     compile libraries.apache_commons_lang
+
+    testCompile libraries.test
 }
