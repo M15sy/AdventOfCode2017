@@ -36,7 +36,7 @@ abstract class Solution02 extends SolutionImpl {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(getInputAsStream()))) {
             String line;
             while ((line = br.readLine()) != null) {
-                final List<Integer> row = Arrays.stream(line.split("\\s+"))
+                final List<Integer> row = Arrays.stream(line.split(WHITESPACE_SEPARATOR))
                         .mapToInt(Integer::parseInt)
                         .boxed()
                         .collect(Collectors.toList());

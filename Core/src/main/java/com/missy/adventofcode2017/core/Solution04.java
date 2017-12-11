@@ -52,7 +52,7 @@ abstract class Solution04 extends SolutionImpl {
      */
     private boolean isValidPassword(final String password) {
         // for each word in the password
-        final List<String> words = List.of(password.split("\\s+"));
+        final List<String> words = List.of(password.split(WHITESPACE_SEPARATOR));
         for (int i = 0; i < words.size(); i++) {
             final String word = words.get(i);
             // compare it to the other words
