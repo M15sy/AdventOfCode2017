@@ -16,6 +16,7 @@ abstract class SolutionImpl implements Solution {
 
     static final String WHITESPACE_SEPARATOR = "\\s+";
     static final String LINE_SEPARATOR = "\\n+";
+    static final String COMMA_SEPARATOR = ",";
 
     /**
      * Returns the puzzle input file's name as a {@link String}.
