@@ -1,7 +1,12 @@
 package com.missy.adventofcode2017.core;
 
 /**
- * Created by c05917a on 10/12/2017.
+ * A solution to day 11 part 1's puzzle.
  */
-public class Solution11a {
+class Solution11a extends Solution11 implements PartOne {
+    @Override
+    protected Integer getResult() {
+        // return how many steps away he is now
+       return calcSteps(getX(), getY());
+    }
 }
