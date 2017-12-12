@@ -5,6 +5,7 @@ import java.util.List;
 /**
  * A solution manager.
  */
+@SuppressWarnings("ClassFanOutComplexity")
 public final class SolutionManager {
 
     private static List<Solution> solutions = List.of(
@@ -29,7 +30,9 @@ public final class SolutionManager {
             new Solution10a(),
             new Solution10b(),
             new Solution11a(),
-            new Solution11b()
+            new Solution11b(),
+            new Solution12a(),
+            new Solution12b()
     );
 
     /**
