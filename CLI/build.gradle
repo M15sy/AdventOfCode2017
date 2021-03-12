@@ -3,6 +3,6 @@ apply plugin: 'application'
 mainClassName = 'com.missy.adventofcode2017.cli.Main'
 
 dependencies {
-    compile project(':core')
-    compile libraries.apache_commons_lang
+    implementation project(':core')
+    implementation libraries.apache_commons_lang
 }

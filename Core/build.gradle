@@ -1,7 +1,7 @@
 dependencies {
-    compile libraries.codepoetics
-    compile libraries.apache_commons_io
-    compile libraries.apache_commons_lang
+    implementation libraries.codepoetics
+    implementation libraries.apache_commons_io
+    implementation libraries.apache_commons_lang
 
-    testCompile libraries.test
+    testImplementation libraries.test
 }

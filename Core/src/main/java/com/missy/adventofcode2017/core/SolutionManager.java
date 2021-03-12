@@ -30,9 +30,9 @@ public final class SolutionManager {
             new Solution10a(),
             new Solution10b(),
             new Solution11a(),
-            new Solution11b(),
-            new Solution12a(),
-            new Solution12b()
+            new Solution11b()
+//            new Solution12a(),
+//            new Solution12b()
     );
 
     /**
