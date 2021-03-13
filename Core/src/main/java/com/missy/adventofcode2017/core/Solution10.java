@@ -1,9 +1,10 @@
 package com.missy.adventofcode2017.core;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * A solution to day 10's puzzle.
@@ -27,10 +28,7 @@ abstract class Solution10 extends SolutionImpl {
      */
     protected List<Integer> knotHash(final List<Integer> input) {
         // create the string to be tied into knots
-        final Integer[] array = new Integer[256];
-        Arrays.setAll(array, i -> i);
-        final List<Integer> string = new ArrayList<>();
-        Collections.addAll(string, array);
+        final List<Integer> string = IntStream.range(0, 256).boxed().collect(Collectors.toList());
 
         // for each input
         int position = 0;

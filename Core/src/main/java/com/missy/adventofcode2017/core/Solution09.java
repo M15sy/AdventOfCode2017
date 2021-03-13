@@ -51,7 +51,7 @@ abstract class Solution09 extends SolutionImpl {
 
         // for each char
         for (int i = 0; i < input.length; i++) {
-         final   char ch = input[i];
+            final char ch = input[i];
             if (ch == '!') {
                 // if it's a '!' ignore the next char
                 i++;

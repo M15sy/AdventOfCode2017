@@ -1,5 +1,6 @@
 package com.missy.adventofcode2017.core;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -8,18 +9,6 @@ import java.util.List;
 class Solution02a extends Solution02 implements PartOne {
     @Override
     Integer calculateRow(final List<Integer> row) {
-        Integer min = Integer.MAX_VALUE;
-        Integer max = Integer.MIN_VALUE;
-        for (int i = 0; i < row.size(); i++) {
-            final int it = row.get(i);
-            if (it > max) {
-                max = it;
-            }
-            if (it < min) {
-                min = it;
-            }
-        }
-        // return the range of the row
-        return max - min;
+        return Collections.max(row) - Collections.min(row);
     }
 }

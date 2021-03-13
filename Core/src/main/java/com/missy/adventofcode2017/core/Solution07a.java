@@ -1,7 +1,14 @@
 package com.missy.adventofcode2017.core;
 
+import java.io.IOException;
+
 /**
- * Created by c05917a on 07/12/2017.
+ * A solution to day 7 part 1's puzzle.
  */
-public class Solution07a {
+class Solution07a extends Solution07 implements PartOne {
+    @Override
+    public String solve() throws IOException {
+        readInputToNodes();
+        return findRoot().getName();
+    }
 }

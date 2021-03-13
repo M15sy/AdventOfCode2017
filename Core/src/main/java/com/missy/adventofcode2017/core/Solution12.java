@@ -27,7 +27,7 @@ abstract class Solution12 extends SolutionImpl {
      * @throws IOException if an IO error occurs.
      */
     protected Map<Integer, List<Integer>> readInput() throws IOException {
-        return getInputAsListOfString("\\r\\n").stream()
+        return getInputAsListOfString(LINE_SEPARATOR).stream()
                 .collect(Collectors.toMap(
                         s -> Integer.parseInt(s.split(" <-> ")[0]),
                         s -> Arrays.stream(s.split(" <-> ")[1].split(", "))

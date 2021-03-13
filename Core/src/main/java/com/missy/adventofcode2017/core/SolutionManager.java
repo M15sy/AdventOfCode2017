@@ -21,8 +21,8 @@ public final class SolutionManager {
             new Solution05b(),
             new Solution06a(),
             new Solution06b(),
-//            new Solution07a(),
-//            new Solution07b(),
+            new Solution07a(),
+            new Solution07b(),
             new Solution08a(),
             new Solution08b(),
             new Solution09a(),
@@ -30,9 +30,9 @@ public final class SolutionManager {
             new Solution10a(),
             new Solution10b(),
             new Solution11a(),
-            new Solution11b()
-//            new Solution12a(),
-//            new Solution12b()
+            new Solution11b(),
+            new Solution12a(),
+            new Solution12b()
     );
 
     /**

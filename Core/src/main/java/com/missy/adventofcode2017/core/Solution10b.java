@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A solution to day 10 part 2's puzzle.
@@ -22,11 +23,7 @@ class Solution10b extends Solution10 implements PartTwo {
     }
 
     private List<Integer> getInput() throws IOException {
-        final List<Integer> input = new ArrayList<>();
-        final char[] inputAsCharArray = getInputAsString().toCharArray();
-        for (char c : inputAsCharArray) {
-            input.add((int) c);
-        }
+        final List<Integer> input = getInputAsString().chars().boxed().collect(Collectors.toList());
         input.addAll(Arrays.asList(17, 31, 73, 47, 23));
         // x64 as we want to run a total of 64 rounds
         final List<Integer> totalInput = new ArrayList<>();
@@ -49,9 +46,9 @@ class Solution10b extends Solution10 implements PartTwo {
     private String hex(final byte[] denseHash) {
         final StringBuilder sb = new StringBuilder();
         // for each byte
-        for (int i = 0; i < denseHash.length; i++) {
+        for (byte hash : denseHash) {
             // try get it's hex
-            String hex = Integer.toHexString(denseHash[i]);
+            String hex = Integer.toHexString(hash);
             // if it's too short prepend with zeros
             while (hex.length() < 2) {
                 hex = "0" + hex;
